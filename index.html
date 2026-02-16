@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kagami - 鏡</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="container">
+        <video id="mirror" autoplay playsinline></video>
+        
+        <div id="message" class="message">
+            <p>カメラへのアクセスを許可してください</p>
+        </div>
+        
+        <div id="error" class="error hidden">
+            <p id="error-text"></p>
+        </div>
+        
+        <!-- コントロールパネル -->
+        <div id="controls" class="controls hidden">
+            <div class="control-group">
+                <label for="brightness">明るさ</label>
+                <input type="range" id="brightness" min="50" max="200" value="100" step="10">
+                <span id="brightness-value">100%</span>
+            </div>
+            
+            <div class="control-group">
+                <label for="zoom">ズーム</label>
+                <input type="range" id="zoom" min="100" max="300" value="100" step="10">
+                <span id="zoom-value">1.0x</span>
+            </div>
+            
+            <div class="control-group">
+                <button id="pause-btn" class="control-btn">⏸ 一時停止</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
